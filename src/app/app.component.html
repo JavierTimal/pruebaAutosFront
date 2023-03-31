@@ -1,0 +1,112 @@
+<div id="principal" class="">
+  <div class="pt-4">
+    <p class="fs-4 fw-bold text-center mt-10 mb-3 ">Vehículo</p>
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Marca</label>
+        <select name="" id="" class="form-select" (change)="onChangeMarca($event)" #marca> 
+          <option selected value="-1">Selecciona una marca</option>
+          <option *ngFor="let m of marcas" [value]="m.id">{{m.nombre}}</option>
+          
+        </select>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Submarca</label>
+        <select name="" id="" class="form-select" (change)="onChangeSubmarca($event)" #submarca>
+          <option selected value="-1">Selecciona una submarca</option>
+          <option *ngFor="let s of submarcas" [value]="s.id">{{s.nombre}}</option>
+          
+        </select>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Modelo</label>
+        <select name="" id="" class="form-select" (change)="onChangeModelo($event)" #modelo>
+          <option selected value="-1">Selecciona un modelo</option>
+          <option *ngFor="let m of modelos" [value]="m.id">{{m.modelo}}</option>
+          
+        </select>
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Descripcion</label>
+        <select name="" id="" class="form-select" (change)="onChangeDescripcion($event)" #descripcion>
+          <option selected value="-1">Selecciona una descripcion</option>
+          <option *ngFor="let d of descripciones" [value]="d.descripcionLlave">{{d.descripcion}}</option>
+          
+        </select>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="pt-4">
+    <p class="fs-4 fw-bold text-center mt-10 mb-3 ">Domicilio</p>
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <input type="number" name="" id="" class="form-control" (change)="onChangeCP($event)" placeholder="Codigo Postal:">
+          
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Estado</label>
+        <input type="text" name="" id="" class="form-control" placeholder="Estado" readonly="readonly" style="background-color: #e9ecef;" [value]="estado">
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Municipio</label>
+        <input type="text" name="" id="" class="form-control" placeholder="Municipio" readonly="readonly" style="background-color: #e9ecef;"  [value]="municipio">
+      </div>
+    </div>
+
+    <div class="row pb-3">
+      <div class="col-md-8 offset-md-2">
+        <label for="">Colonia</label>
+        <select name="" id="" class="form-select" (change)="onChangeDescripcion($event)">
+          <option selected>Selecciona una colonia</option>
+          <option *ngFor="let c of colonias" [value]="c.iIdUbicacion">{{c.sUbicacion}}</option>
+          
+        </select>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+  <div class="pt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="row">
+
+          <div class="col-md-12">
+            <button type="button" class="btn btn-primary float-end" (click)="validarDatos()">
+              Realizar peticion
+            </button>
+          </div>
+
+          <!-- <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+          <div class="col-md-3 offset-md-3">
+            <button type="button" class="btn btn-primary btn-lg float-end">
+              Large button
+            </button>
+          </div> -->
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
